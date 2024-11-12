@@ -10,6 +10,7 @@ Application project skeleton using Symfony framework.
 - twig
 - symfony debug pack
 - doctrine
+- asset mapper
 
 ## Usage
 
