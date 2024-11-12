@@ -30,6 +30,14 @@ ddev composer update
 Note: if not using doctrine, use `phpstan-symfony.neon` instead of `phpstan-symfony-doctrine.neon`.
 
 ```shell
-ddev composer check
+# c is an alias for composer
+ddev c check
+```
+
+### Symfony
+
+```shell
+# alias for ddev exec symfony console
+ddev sc PARAMETERS
 ```
 
