@@ -11,6 +11,7 @@ Application project skeleton using Symfony framework.
 - symfony debug pack
 - doctrine
 - asset mapper
+- stimulus
 
 ## Usage
 
