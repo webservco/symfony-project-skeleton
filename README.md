@@ -2,6 +2,13 @@
 
 Application project skeleton using Symfony framework.
 
+## Includes
+
+- minimal symfony
+- strict opinionated code validation
+- ddev
+- twig
+
 ## Usage
 
 ```shell
