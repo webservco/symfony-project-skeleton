@@ -8,6 +8,7 @@ Application project skeleton using Symfony framework.
 - strict opinionated code validation
 - ddev
 - twig
+- symfony debug pack
 
 ## Usage
 
