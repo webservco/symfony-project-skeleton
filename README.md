@@ -9,6 +9,7 @@ Application project skeleton using Symfony framework.
 - ddev
 - twig
 - symfony debug pack
+- doctrine
 
 ## Usage
 
