@@ -1,4 +1,4 @@
-# symfony/project-skeleton
+# webservco/symfony-project-skeleton
 
 Application project skeleton using Symfony framework.
 
