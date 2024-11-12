@@ -31,7 +31,7 @@ git push -u origin main
 
 ```shell
 ddev start
-ddev composer update
+ddev c update
 ```
 
 ### Code validation
