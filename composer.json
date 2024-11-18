@@ -101,7 +101,8 @@
             "@check:twig",
             "@check:phpstan",
             "@check:phpmd",
-            "@check:psalm"
+            "@check:psalm",
+            "@check:phan"
         ],
         "fix:phpcs": "vendor/bin/phpcbf --standard=.phpcs/php-coding-standard.xml --extensions=php -sp bin config public src tests --ignore=./config/bundles.php,./tests/bootstrap.php",
         "fix:twig": "vendor/bin/twig-cs-fixer lint templates --fix",
