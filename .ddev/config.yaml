@@ -1,5 +1,5 @@
 name: symfony-project-skeleton
-type: php
+type: symfony
 docroot: public
 # php_version: "8.2"
 # webserver_type: nginx-fpm
