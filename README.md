@@ -41,8 +41,9 @@ ddev c update
 Note: if not using doctrine, use `phpstan-symfony.neon` instead of `phpstan-symfony-doctrine.neon`.
 
 ```shell
-# c is an alias for composer
-ddev c check
+# first c is an alias for composer
+# second c is an alias for check
+ddev c c
 ```
 
 ### Symfony

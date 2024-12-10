@@ -107,6 +107,7 @@
             "@check:psalm",
             "@check:phan"
         ],
+        "c": "@check",
         "fix:phpcs": "vendor/bin/phpcbf --standard=.phpcs/php-coding-standard.xml --extensions=php -sp bin config public src tests --ignore=./config/bundles.php",
         "fix:twig": "vendor/bin/twig-cs-fixer lint templates --fix",
         "test" : "XDEBUG_MODE=coverage vendor/bin/phpunit --colors=always --configuration vendor/webservco/coding-standards/phpunit/phpunit-10.xml --display-deprecations --display-errors --display-incomplete --display-notices --display-skipped --display-warnings",
