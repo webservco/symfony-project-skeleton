@@ -4,7 +4,7 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
-        "php": "^8.3",
+        "php": "^8.4",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "doctrine/dbal": "^3",
@@ -45,7 +45,7 @@
         "symfony/monolog-bundle": "^3.0",
         "symfony/stopwatch": "7.2.*",
         "symfony/web-profiler-bundle": "7.2.*",
-        "vimeo/psalm": "^5",
+        "vimeo/psalm": "^6",
         "vincentlanglet/twig-cs-fixer": "^3",
         "webservco/coding-standards": "^0",
         "weirdan/doctrine-psalm-plugin": "^2"
