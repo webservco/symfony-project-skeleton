@@ -11,17 +11,17 @@
         "doctrine/doctrine-bundle": "^2.13",
         "doctrine/doctrine-migrations-bundle": "^3.3",
         "doctrine/orm": "^3.3",
-        "symfony/asset": "7.2.*",
-        "symfony/asset-mapper": "7.2.*",
-        "symfony/console": "7.2.*",
-        "symfony/dotenv": "7.2.*",
+        "symfony/asset": "7.4.*",
+        "symfony/asset-mapper": "7.4.*",
+        "symfony/console": "7.4.*",
+        "symfony/dotenv": "7.4.*",
         "symfony/flex": "^2",
-        "symfony/framework-bundle": "7.2.*",
-        "symfony/runtime": "7.2.*",
+        "symfony/framework-bundle": "7.4.*",
+        "symfony/runtime": "7.4.*",
         "symfony/stimulus-bundle": "^2.21",
-        "symfony/twig-bundle": "7.2.*",
+        "symfony/twig-bundle": "7.4.*",
         "symfony/ux-turbo": "^2.21",
-        "symfony/yaml": "7.2.*",
+        "symfony/yaml": "7.4.*",
         "twig/extra-bundle": "^3.20",
         "twig/twig": "^3.20"
     },
@@ -40,10 +40,10 @@
         "psalm/plugin-symfony": "^5",
         "slevomat/coding-standard": "^8",
         "squizlabs/php_codesniffer": "^4",
-        "symfony/debug-bundle": "7.2.*",
+        "symfony/debug-bundle": "7.4.*",
         "symfony/monolog-bundle": "^3.0",
-        "symfony/stopwatch": "7.2.*",
-        "symfony/web-profiler-bundle": "7.2.*",
+        "symfony/stopwatch": "7.4.*",
+        "symfony/web-profiler-bundle": "7.4.*",
         "vimeo/psalm": "^6",
         "vincentlanglet/twig-cs-fixer": "^3",
         "webservco/coding-standards": "^2",
@@ -91,10 +91,10 @@
             "@auto-scripts"
         ],
         "check:lint": "vendor/bin/parallel-lint bin config public src tests",
-        "check:phan": "vendor/bin/phan --config-file vendor/webservco/coding-standards/phan/config.php",
-        "check:phpcs": "vendor/bin/phpcs --standard=.phpcs/php-coding-standard.xml --extensions=php -sp bin config public src tests --ignore=./config/bundles.php",
-        "check:phpmd": "vendor/bin/phpmd bin,config,public,src,tests json vendor/webservco/coding-standards/phpmd/phpmd-rule-set.xml",
-        "check:phpstan": "vendor/bin/phpstan analyse bin config public src tests --ansi -c vendor/webservco/coding-standards/phpstan/phpstan-symfony-doctrine.neon",
+        "check:phan": "vendor/bin/phan --config-file vendor/webservco/coding-standards/phan/config.php --exclude-file config/bundles.php --exclude-file config/reference.php",
+        "check:phpcs": "vendor/bin/phpcs --standard=.phpcs/php-coding-standard.xml --extensions=php -sp bin config public src tests --ignore=./config/bundles.php,./config/reference.php",
+        "check:phpmd": "vendor/bin/phpmd bin,config,public,src,tests json vendor/webservco/coding-standards/phpmd/phpmd-rule-set.xml --exclude config/reference.php",
+        "check:phpstan": "vendor/bin/phpstan analyse bin config public src tests --ansi -c phpstan.neon",
         "check:psalm": "vendor/bin/psalm --config=vendor/webservco/coding-standards/psalm/psalm-symfony-doctrine.xml --no-diff",
         "check:twig": "symfony console lint:twig templates && vendor/bin/twig-cs-fixer lint templates",
         "check": [
@@ -107,7 +107,7 @@
             "@check:phan"
         ],
         "c": "@check",
-        "fix:phpcs": "vendor/bin/phpcbf --standard=.phpcs/php-coding-standard.xml --extensions=php -sp bin config public src tests --ignore=./config/bundles.php",
+        "fix:phpcs": "vendor/bin/phpcbf --standard=.phpcs/php-coding-standard.xml --extensions=php -sp bin config public src tests --ignore=./config/bundles.php,./config/reference.php",
         "fix:twig": "vendor/bin/twig-cs-fixer lint templates --fix",
         "test" : "XDEBUG_MODE=coverage vendor/bin/phpunit --colors=always --configuration vendor/webservco/coding-standards/phpunit/phpunit-13.xml",
         "test:dox" : "@test --testdox"
@@ -118,7 +118,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "7.2.*"
+            "require": "7.4.*"
         }
     }
 }
